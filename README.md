@@ -3,7 +3,11 @@
 This app showcases a fully working integration between Preact Signals and Vue Composition Api.
 
 It is totally possible to write your state and logic in another completely different reactivity system. 
-You don't have to use Vue's reactivity system all the way.
+**You don't have to** use Vue's reactivity system all the way.
+
+I love 💚 Vue and Composition API! — don't get me wrong.
+This is merely a demonstration
+that a lot is possible when you think a bit out of the box and put your architectural thinking 🧠 to the test.
 
 #### A few realistic use-cases:
 
@@ -16,10 +20,6 @@ but you want to switch to Preact Signals, MobX or Redux instead,
 to fully separate the global state tooling from the view layer.
 
 4. You have a library full of code that uses another reactivity system, and you need that code to work in a Vue environment, but you don't have the time to rewrite all of it.
-
-I love Composition API! — don't get me wrong. 
-This is merely a demonstration
-that a lot is possible when you think a bit out of the box and put your architectural thinking to the test.
 
 ## How to run the app
 
