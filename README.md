@@ -1,6 +1,22 @@
-# Vue 3 + TypeScript + Vite
+# Preact Signals & Vue
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This app showcases a fully working integration between a completely different reactivity system like Preact Signals, and Vue Composition Api.
+
+It is totally possible to write your state and logic in another completely different reactivity system. 
+You don't have to use Vue's reactivity system all the way.
+
+#### A few realistic use-cases:
+
+Would you maybe like to use MobX for global state management instead of Vuex or Pinia?
+
+Are you in the phase of rewriting a solution from Vue to React, and you want to use Preact Signals?
+
+Are you working with a legacy Vue 2 application that uses Vuex,
+but you want to switch to Preact Signals, MobX or Redux instead?
+
+I love Composition API! — don't get me wrong. 
+This is merely a demonstration
+that a lot is possible when you think a bit out of the box and put your architectural thinking to the test.
 
 ## Recommended IDE Setup
 
