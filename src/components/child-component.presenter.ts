@@ -17,6 +17,12 @@ export function useChildComponentPresenter(componentProps: Props) {
 
     const inputFieldValue = useHybridRef('')
 
+    Signals.effect(() => {
+        if (inputFieldValue.value) {
+            console.log(`Preact Signals tracked the change: ${inputFieldValue.value}`)
+        }
+    })
+
     const computedMessage = Signals.computed(() => {
         return `${state.value.prependedText} ${props.value.msg}`
     })
