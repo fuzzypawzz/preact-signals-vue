@@ -1,6 +1,7 @@
 import * as Signals from "@preact/signals";
 import { usePreactViewModel } from "../hooks/use-preact-viewmodel.ts";
 import { useVueProps } from "../hooks/use-vue-props.ts";
+import { useHybridRef } from "../hooks/use-hybrid-ref.ts";
 
 export type Props = {
     msg: string
@@ -14,6 +15,8 @@ export function useChildComponentPresenter(componentProps: Props) {
         thankYouMessage: 'Thanks! 🚀 ❤️ Author: Jannik Maag (fuzzypawzz)'
     })
 
+    const inputFieldValue = useHybridRef()
+
     const computedMessage = Signals.computed(() => {
         return `${state.value.prependedText} ${props.value.msg}`
     })
@@ -22,7 +25,8 @@ export function useChildComponentPresenter(componentProps: Props) {
         viewModel: usePreactViewModel(() => {
             return {
                 message: computedMessage.value,
-                thankYouMessage: state.value.thankYouMessage
+                thankYouMessage: state.value.thankYouMessage,
+                inputFieldValue
             }
         }),
     }
