@@ -11,6 +11,10 @@ const { viewModel } = useChildComponentPresenter(props)
 
   <p>A simple, yet powerful integration can make Preact Signals work in a Vue app.</p>
 
+  <p>Your text: {{ viewModel.inputFieldValue.value }}</p>
+
+  <input placeholder="Type something" v-model="viewModel.inputFieldValue.value" />
+
   <h3>What is happening exactly?</h3>
 
   <p>
