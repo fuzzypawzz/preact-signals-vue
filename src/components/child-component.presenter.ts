@@ -15,7 +15,7 @@ export function useChildComponentPresenter(componentProps: Props) {
         thankYouMessage: 'Thanks! 🚀 ❤️ Author: Jannik Maag (fuzzypawzz)'
     })
 
-    const inputFieldValue = useHybridRef()
+    const inputFieldValue = useHybridRef('')
 
     const computedMessage = Signals.computed(() => {
         return `${state.value.prependedText} ${props.value.msg}`

@@ -1,9 +1,9 @@
-import {ref} from "vue";
+import {ref, UnwrapRef} from "vue";
 import {signal} from "@preact/signals";
 
-export function useHybridRef() {
-    const vueRef = ref('')
-    const preactSignal = signal('')
+export function useHybridRef<TValue>(value: TValue) {
+    const vueRef = ref<TValue>(value)
+    const preactSignal = signal<TValue>(value)
 
     return {
         get value() {
@@ -11,8 +11,8 @@ export function useHybridRef() {
             return preactSignal.value
         },
 
-        set value(value: string) {
-            vueRef.value = value
+        set value(value: TValue) {
+            vueRef.value = value as UnwrapRef<TValue>
             preactSignal.value = value
         },
 
